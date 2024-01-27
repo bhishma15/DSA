@@ -1,0 +1,36 @@
+
+Algorithm design technique
+
+1) Brute force
+
+2) Divide and conquer
+
+	- binary search
+
+	- quick sort
+
+	- merge sort
+
+3) Greedy
+
+	- prims algorithm
+
+	- krushkal algorithm
+
+
+4) Dynamic programming
+	
+	- Fibonacci series
+
+   	- Knapsack
+
+   	- Longest common subsequence
+	
+	- Matrix chain multiplication
+
+	- Traveling salesman problem
+
+
+5) Backtracking
+
+	- N queen problem

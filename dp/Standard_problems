@@ -1,0 +1,15 @@
+
+1) Fibonacci series
+
+2) knapsack
+
+3) Longest common subsequence
+
+4) Matrix chain multiplication
+
+5) Traveling salesman problem
+
+6) Bellman ford
+
+7) Floyd warshall
+&&palindrom[i+1][j-1]

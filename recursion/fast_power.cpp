@@ -7,7 +7,7 @@ int fastPower(int a,int b){
 	int ans;
 	if(b&1){
 		ans=fastPower(a,(b-1)/2);
-		ans =ans*ans;
+		ans *= ans;
 		return a*ans;
 	}
 	else{
@@ -16,12 +16,16 @@ int fastPower(int a,int b){
 		return ans;
 	}
 }
+
+//Normal way of finding power
 int power(int a,int b){
+	//base case
 	if(b==0){
 		return 1;
 	}
 	
-		return a*solve(a,b-1);
+	//recursive case
+	return a*power(a,b-1);
 	
 }
 

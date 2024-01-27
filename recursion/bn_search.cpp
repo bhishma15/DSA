@@ -2,19 +2,22 @@
 using namespace std;
 
 int bin_search(int arr[],int key,int left,int right){
-	if(left<=right){
-		int mid=(left+right)/2;
-		if(arr[mid]==key){
-			return mid;
-		}
-		else if(arr[mid] >key){
-			return bin_search(arr,key,left,mid-1);
-		}
-		else if(arr[mid]<key){
-			return bin_search(arr,key,mid+1,right);
-		}
+	//Element not present
+	if(left > right)
+		return -1;
+	
+	int mid=(left+right)/2;
+	
+	//element found 
+	if(arr[mid]==key){
+		return mid;
 	}
-	return -1;
+	else if(arr[mid] >key){
+		return bin_search(arr,key,left,mid-1);
+	}
+	else if(arr[mid]<key){
+		return bin_search(arr,key,mid+1,right);
+	}
 }
 int main(){
 	int arr[]={3,6,8,9,10,15};

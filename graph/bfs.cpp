@@ -5,12 +5,9 @@ using namespace std;
 vector <int> bfs(vector<int> g[], int N) {
 
     // Your code here
-    bool *vis=new bool[N];
+    vector<bool> vis(n,0);
     vector<int> v;
     
-    for(int i=0;i<N;i++){
-        vis[i]=false;
-    }
     queue<int> q;
     q.push(0);
     vis[0]=true;
@@ -18,7 +15,7 @@ vector <int> bfs(vector<int> g[], int N) {
         int s=q.front();
         q.pop();
         v.push_back(s);
-        for(auto u:g[s]){
+        for(int u:g[s]){
             if(vis[u])continue;
             vis[u]=true;
             q.push(u);

@@ -28,8 +28,8 @@ vector<vector<int> > graphCreateMat(){
 	return v;
 }
 
-//adjacency list representation
-vector<pair<int,int> > createListGraph(){
+//adjacency list for weighted graph
+vector<pair<int,int>> createListGraph(){
 	int n;
 	cout<<"Enter no of nodes"<<endl;
 	cin>>n;
@@ -41,6 +41,25 @@ vector<pair<int,int> > createListGraph(){
 		int x,y,w;
 		cin>>x>>y>>w;
 		adj[x].push_back({y,w});
+	}
+  return adj[n];
+}
+
+//adjacency list for non-weighted graph
+
+vector<int> createList(){
+		int n;
+	cout<<"Enter no of nodes"<<endl;
+	cin>>n;
+	vector<int> adj[n];
+	int m;
+	cout<<"enter edges"<<endl;
+	cin>>m;
+	while(m--){
+		int x,y;
+		cin>>x>>y>>w;
+		adj[x].push_back(y);
+		adj[y].push_back(x);
 	}
   return adj[n];
 }

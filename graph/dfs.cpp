@@ -7,7 +7,7 @@ of the graph.
 using namespace std;
  
 
-void solve(vector<int> g[],bool vis[],int s,vector<int>& v){
+void dfs(vector<int> g[],bool vis[],int s,vector<int>& v){
     if(vis[s])return;
     v.push_back(s);
     vis[s]=true;
@@ -20,12 +20,8 @@ vector <int> dfs(vector<int> g[], int N)
 {
     // Your code here
    vector<int> v;
-   bool *vis=new bool[N];
-   for(int i=0;i<N;i++){
-       vis[i]=false;
-   }
-   
-   solve(g,vis,0,v);
+   vector<bool> vis(n,0);
+   dfs(g,vis,0,v);
    return v;
     
 }
